@@ -53,13 +53,18 @@ const avgNegativeNum = tong / count;
 
 console.log(avgNegativeNum);
 
-const printNegativeGreaterThanAVG = number.filter(
-  (num) => num > avgNegativeNum,
-);
-console.log(printNegativeGreaterThanAVG);
+// const printNegativeGreaterThanAVG = number.filter(
+//   (num) => num > avgNegativeNum,
+// );
+// console.log(printNegativeGreaterThanAVG);
 
 const negativeNumber = number.filter((num) => num < 0);
 console.log(negativeNumber);
+
+const printNegativeGreaterThanAVG = negativeNumber.filter(
+  (num) => num > avgNegativeNum,
+);
+console.log(printNegativeGreaterThanAVG);
 
 let max = negativeNumber[0];
 
@@ -82,10 +87,14 @@ const pendingStatus = orders.filter((o) => o.status === "pending");
 console.log(`Số đơn hàng có trạng thái pending là: ${pendingStatus.length}`);
 
 const pendingCompleted = orders.filter((o) => o.status === "completed");
-console.log(`Số đơn hàng có trạng thái pending là: ${pendingCompleted.length}`);
+console.log(
+  `Số đơn hàng có trạng thái completed là: ${pendingCompleted.length}`,
+);
 
 const pendingCancelled = orders.filter((o) => o.status === "cancelled");
-console.log(`Số đơn hàng có trạng thái pending là: ${pendingCancelled.length}`);
+console.log(
+  `Số đơn hàng có trạng thái cancelled là: ${pendingCancelled.length}`,
+);
 
 // Bài 5: Tìm đơn hàng có giá trị cao nhất
 
