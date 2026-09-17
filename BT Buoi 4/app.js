@@ -49,7 +49,7 @@ getUserByIdPromise(404)
 
 // BT3
 
-async function runApp(userId) {
+const runApp = async (userId) => {
   try {
     console.log(`--- Đang tìm kiếm user có ID: ${userId} ---`);
 
@@ -59,7 +59,7 @@ async function runApp(userId) {
   } catch (error) {
     console.error("Bài 3 - Bắt được lỗi hệ thống:", error);
   }
-}
+};
 
 runApp(1);
 runApp(55);
